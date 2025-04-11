@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -38,21 +37,22 @@ const HeroSection = () => {
           </div>
 
           <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in">
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-300 rounded-full relative overflow-hidden border-4 border-white shadow-lg">
-              {/* Replace with actual image */}
-              <div className="absolute inset-0 flex items-center justify-center text-white text-opacity-50 font-medium">
-                Profile Photo
-              </div>
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
+              <img
+                src="/images/fileimage.jpg"
+                alt="César Soares"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-        </div>
+        </div> {/* <-- fecha a grid */}
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="text-cesar-blue w-8 h-8" />
           </a>
         </div>
-      </div>
+      </div> {/* <-- fecha o container */}
     </section>
   );
 };

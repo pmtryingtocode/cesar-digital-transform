@@ -9,11 +9,11 @@ const SkillsSection = () => {
   ];
 
   const technicalSkills = [
-    { name: "Power Apps", level: 95 },
-    { name: "Power Automate", level: 90 },
-    { name: "SharePoint", level: 85 },
-    { name: "Copilot Studio", level: 80 },
-    { name: "Adobe Campaign", level: 75 },
+    { name: "Agile Project Management", level: 99 },
+    { name: "Scrum", level: 97 },
+    { name: "Backlog Management", level: 97 },
+    { name: "Team Management", level: 95 },
+    { name: "Process Analysis", level: 88 },
   ];
 
   const SkillBar = ({ name, level }: { name: string; level: number }) => (
@@ -52,7 +52,7 @@ const SkillsSection = () => {
           <div className="animate-on-scroll">
             <h3 className="text-xl font-semibold text-cesar-dark mb-6 flex items-center">
               <span className="inline-block w-3 h-3 bg-cesar-blue mr-2 rounded-sm"></span>
-              Technical Skills
+              Hard Skills
             </h3>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
               {technicalSkills.map((skill, index) => (

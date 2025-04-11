@@ -13,27 +13,42 @@ const ExperienceSection = () => {
   const experiences: ExperienceItem[] = [
     {
       company: "DevScope",
-      position: "Project Manager",
-      period: "2022 - Present",
+      position: "Project Manager & Product Owner",
+      period: "September 2023 - Present",
       description: [
         "Leading digital transformation projects using Microsoft Power Platform",
         "Implementing agile methodologies to ensure project success",
         "Collaborating with cross-functional teams to deliver solutions aligned with client goals",
-        "Managing project resources, timelines, and deliverables efficiently"
+        "Managing project resources, timelines, and deliverables efficiently",
+        "Gathering business requirements and proposal preparation",
+        "Ensuring product value incrementation"
       ],
-      technologies: ["Power Apps", "Power Automate", "SharePoint", "Agile", "Scrum"]
+      technologies: ["Scrum", "Agile Project Management", "Team Management", "Client Management", "Backlog Management", "Business Process Analysis", "Azure DevOps", "SharePoint"]
     },
     {
       company: "Impacting Digital",
       position: "Project Manager",
-      period: "2019 - 2022",
+      period: "January 2022 - September 2023",
       description: [
         "Managed client projects from initiation through deployment",
-        "Specialized in Microsoft Power Platform implementations",
-        "Facilitated workshops to gather requirements and align stakeholders",
-        "Developed project plans and ensured timely delivery within budget"
+        "Developed project plans and ensured timely delivery within budget",
+        "Assisted Product Owners in defining project scope and planning",
+        "Managed daily operations, tracked progress, and ensured timely implementation of new projects",
+        "Coordinated with internal teams and stakeholders to meet deadlines and project goals"
       ],
-      technologies: ["Power Platform", "SharePoint", "Agile", "Client Management"]
+      technologies: ["Agile Project Management", "Team Management", "Client Management"]
+    },
+    {
+      company: "Impacting Digital",
+      position: "Marketing Automation Specialist",
+      period: "January 2022 - September 2023",
+      description: [
+        "Worked with various marketing automation platform",
+        "Develop and implement marketing workflows tailored to customer needs",
+        "Configuration of multiple chatbots (agents in current days) integrated with external systems",
+        "Systems integration ensuring data orchestration for marketing and sales departments"
+      ],
+      technologies: ["Marketing Automation Platforms", "Systems Integration", "Adobe Campaign", "Team Work", "Client Management", "Jira", "Confluence"]
     }
   ];
 

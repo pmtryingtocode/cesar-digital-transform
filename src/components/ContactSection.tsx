@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
+
+// substitui estas constantes pelos teus próprios IDs
+const SERVICE_ID = "service_nxla8ug";
+const TEMPLATE_ID = "template_ywl8jhr";
+const PUBLIC_KEY = "k55U9_joXLMgKvh1e";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -25,29 +31,40 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+  
+    console.log("Sending formData to EmailJS:", formData); // DEBUG
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({ name: "", email: "", message: "" });
-      
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .then((result) => {
+        console.log("Email sent:", result.text);
+        setFormData({ name: "", email: "", message: "" });
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error); // DEBUG
+        toast({
+          title: "Oops!",
+          description: "Something went wrong. Please try again later.",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-    }, 1500);
   };
 
   const contactInfo = [
     {
       icon: <Phone className="h-5 w-5 text-cesar-blue" />,
       title: "Phone",
-      value: "+351 912 345 678", // Replace with actual number when available
+      value: "+351 913 210 173", // Replace with actual number when available
     },
     {
       icon: <Mail className="h-5 w-5 text-cesar-blue" />,
       title: "Email",
-      value: "cesar.soares@example.com", // Replace with actual email when available
+      value: "cesar.soares.co@gmail.com", // Replace with actual email when available
     },
     {
       icon: <MapPin className="h-5 w-5 text-cesar-blue" />,
@@ -113,8 +130,8 @@ const ContactSection = () => {
                   required
                   className="w-full"
                 />
-              </div>
-              
+              </div> 
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-cesar-dark mb-1">
                   Message
